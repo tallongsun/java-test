@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.dl.spring.aop.aspectj.aspect.NotVeryUsefulAspect&apos; to &apos;ProfilingAspect&apos;&#x0A;- Original project: &apos;spring-aop-aspectj-test&apos;&#x0A;- Original element: &apos;com.dl.spring.aop.aspectj.aspect.NotVeryUsefulAspect&apos;&#x0A;- Renamed element: &apos;com.dl.spring.aop.aspectj.aspect.ProfilingAspect&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NotVeryUsefulAspect&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.dl.spring.aop.aspectj.aspect{NotVeryUsefulAspect.java[NotVeryUsefulAspect" matchStrategy="1" name="ProfilingAspect" qualified="false" references="true" similarDeclarations="false" stamp="1514879811413" textual="false" version="1.0"/>
+</session>

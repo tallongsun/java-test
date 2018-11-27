@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+
+<beans>
+	<bean id="welcomeAdvice" class="com.dl.spring.aop.interceptor.WelcomeAdvice">
+	</bean>
+	<bean id="welcomeInterceptor" class="com.dl.spring.aop.interceptor.WelcomeInterceptor">
+	</bean>
+	
+	<bean id="nameMatchMethodPointcutAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="mappedName" value="do*" />
+		<property name="advice" ref="welcomeInterceptor" />
+	</bean>
+
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+	</bean>
+
+<!--  	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>*ServiceImpl</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>welcomeAdvice</value>
+				<value>welcomeInterceptor</value>
+			</list>
+		</property>
+	</bean>
+-->
+
+</beans>

@@ -1,0 +1,68 @@
+{
+  "dataSources": [
+    {
+      "spec": {
+        "dataSchema": {
+          "dataSource": "demo",
+          "parser": {
+            "type": "string",
+            "parseSpec": {
+              "format": "json",
+              "timestampSpec": {
+                "column": "timestamp",
+                "format": "auto"
+              },
+              "dimensionsSpec": {
+                "dimensions": [],
+                "dimensionExclusions": ["shipPrice","ProductUnitPrice","ProductAmount","ProductTotalPrice","OrderTotalPrice","AllowanceAmount","PaymentAmount"],
+                "spatialDimensions": []
+              }
+            }
+          },
+          "metricsSpec": [
+            {
+              "type": "count",
+              "name": "count"
+            },
+            {
+              "type": "doubleSum",
+              "name": "ProductTotalPrice",
+              "fieldName": "ProductTotalPrice"
+            },
+            {
+              "type": "doubleSum",
+              "name": "OrderTotalPrice",
+              "fieldName": "OrderTotalPrice"
+            },
+            {
+              "type": "doubleSum",
+              "name": "PaymentAmount",
+              "fieldName": "PaymentAmount"
+            }
+          ],
+          "granularitySpec": {
+            "type": "uniform",
+            "segmentGranularity": "HOUR",
+            "queryGranularity": "HOUR",
+            "rollup":false
+          }
+        },
+        "tuningConfig": {
+          "type": "realtime",
+          "maxRowsInMemory": 100000,
+          "intermediatePersistPeriod": "PT10m",
+          "windowPeriod": "PT10M",
+          "tranquility.lingerMillis" : -1,
+          "tranquility.maxBatchSize" : 5000
+        }
+      }
+    }
+  ],
+  "properties": {
+    "zookeeper.connect": "localhost:2181",
+    "druid.selectors.indexing.serviceName": "druid/overlord",
+    "druid.discovery.curator.path": "/druid/discovery",
+    "druidBeam.taskLocator": "overlord",
+    "druidBeam.overlordPollPeriod": "PT5S"
+  }
+}

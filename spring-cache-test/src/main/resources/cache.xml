@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop.xsd
+               http://www.springframework.org/schema/cache
+               http://www.springframework.org/schema/cache/spring-cache.xsd
+               ">
+               
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="200" />
+		<property name="maxIdle" value="50" />
+		<property name="maxWaitMillis" value="300000" />
+	</bean>
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.password}" />
+
+	<bean id="stringRedisSerializer"
+		class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		<!--
+	<bean id="jdkRedisSerializer"
+		class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer">
+	</bean>
+	-->
+
+	<bean id="redisTemplateCache" class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory" p:keySerializer-ref="stringRedisSerializer"
+		p:hashKeySerializer-ref="stringRedisSerializer" p:valueSerializer-ref="stringRedisSerializer" p:hashValueSerializer-ref="stringRedisSerializer"/>
+		
+	<!-- 
+	<bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+		<property name="usePrefix" value="true" />
+		<constructor-arg index="0" ref="redisTemplateCache"></constructor-arg>
+		<property name="expires">
+			<map>
+				<entry key="defaultCache" value="3600" />
+			</map>
+		</property>
+	</bean>
+	-->
+	<bean id="cacheManager" class="org.springframework.cache.concurrent.ConcurrentMapCacheManager" />
+
+    <bean id="sessionRepository" class="org.springframework.session.data.redis.RedisOperationsSessionRepository">
+        <constructor-arg ref="redisTemplateCache" />
+        <property name="defaultMaxInactiveInterval" value="1200" />
+    </bean>
+    
+    <bean class="org.springframework.session.web.http.SessionRepositoryFilter">
+        <constructor-arg ref="sessionRepository" />
+        <property name="httpSessionStrategy">
+            <bean class="org.springframework.session.web.http.CookieHttpSessionStrategy" />
+        </property>
+    </bean>
+</beans>

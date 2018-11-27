@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.db.perf.dao.SimpleObjectMapper">
+
+	<select id="getAll" resultType="com.dl.db.perf.SimpleObject">
+		select
+		vertex,uid,status,path
+		from simple_object
+	</select>
+	
+	<insert id="insert" parameterType="com.dl.db.perf.SimpleObject">
+		insert into simple_object(vertex,status,path,uid)
+		VALUES
+		(#{vertex},#{status},#{path},#{uid})
+	</insert>
+
+	<insert id="insertList" parameterType="java.util.List">
+		insert into simple_object (vertex,status,path,uid)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(
+			#{item.vertex},
+			#{item.status},
+			#{item.path},
+			#{item.uid}
+			)
+		</foreach>
+	</insert>
+
+	<delete id="deleteAll">
+		delete from simple_object
+	</delete>
+</mapper>

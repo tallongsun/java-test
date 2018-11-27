@@ -1,0 +1,20 @@
+1505703387718	Rename resource 'test_service.proto'
+1505703575813	Rename resource 'greeter.proto'
+1505705121007	Rename resource 'helloworld.proto'
+1505705251358	Rename type 'HelloWorldServer'
+1505705263250	Rename type 'HelloWorldClient'
+1505705279787	Rename package 'com.dl.grpc.test.helloworld'
+1505706402493	Copy file
+1505785856016	Delete element
+1505785975808	Copy compilation unit
+1505785991603	Rename type 'GreeterJsonServiceImpl'
+1505787840802	Rename type 'GreeterServiceJsonImpl'
+1505787852352	Rename type 'GreeterServiceImpl'
+1505787909244	Rename type 'GreeterServiceJsonImpl1'
+1505791435879	Copy compilation unit
+1505963823474	Delete element
+1505965534906	Copy compilation units
+1505965553200	Rename type 'KvServiceImpl'
+1505965700899	Rename type 'KvServer'
+1505965714037	Rename type 'KvClient'
+1505973213352	Move compilation units

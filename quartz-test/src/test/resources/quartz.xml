@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- job -->
+	<bean name="testJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.dl.quartz.spring.TestJob" />
+		<property name="durability" value="true" />
+	</bean>
+
+	<!-- trigger -->
+	<bean name="testTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="testJob" />
+		<property name="cronExpression">
+			<value>0/3 * * * * ?</value>
+		</property>
+		<property name="timeZone">
+			<value>GMT+8:00</value>
+		</property>
+		<!-- 
+		     -1:ignore(超时可以忽略，也就说会补偿所有miss的调度) 
+			  1:now(立刻执行miss的当次调度，下次正常调度) 
+			  2:do nothing(下次正常调度)
+		-->
+		<property name="misfireInstruction" value="-1"/>
+	</bean>
+	
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="configLocation" value="classpath:quartz.properties" />
+		<property name="dataSource" ref="quartzDataSource" />
+		<property name="transactionManager" ref="quartzTransactionManager" />
+		
+		<property name="overwriteExistingJobs" value="true" />
+		<property name="schedulerName" value="quartzScheduler" />
+		<property name="applicationContextSchedulerContextKey" value="appli" />
+
+		<property name="jobDetails">
+			<list>
+				<ref bean="testJob" />
+			</list>
+		</property>
+
+		<property name="triggers">
+			<list>
+				<ref bean="testTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

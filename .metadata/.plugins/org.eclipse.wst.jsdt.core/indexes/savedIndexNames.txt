@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/tallong/JavaProjects/test/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1549921019.index
+1195253490.index
+3021616326.index
+1243459452.index
+368795243.index
+5924193.index

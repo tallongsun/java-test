@@ -1,0 +1,5 @@
+server:
+  port: 8080
+  #jetty:
+  #  io-threads: 4
+  #  worker-threads: 4

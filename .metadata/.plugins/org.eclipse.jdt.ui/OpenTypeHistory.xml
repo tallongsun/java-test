@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=grpc-test/\/Users\/tallong\/.m2\/repository\/io\/grpc\/grpc-core\/1.4.0\/grpc-core-1.4.0.jar&lt;io.grpc.internal(DelayedClientTransport.class[DelayedClientTransport" modifiers="48" timestamp="1503492470000"/>
+<typeInfo handle="=grpc-test/\/Users\/tallong\/.m2\/repository\/io\/grpc\/grpc-stub\/1.4.0\/grpc-stub-1.4.0.jar&lt;io.grpc.stub(ClientCalls.class[ClientCalls" modifiers="49" timestamp="1503492475000"/>
+<typeInfo handle="=grpc-test/\/Users\/tallong\/.m2\/repository\/io\/grpc\/grpc-netty\/1.4.0\/grpc-netty-1.4.0.jar&lt;io.grpc.netty(NettyClientTransport.class[NettyClientTransport" modifiers="32" timestamp="1503492470000"/>
+<typeInfo handle="=grpc-test/\/Users\/tallong\/.m2\/repository\/io\/grpc\/grpc-core\/1.4.0\/grpc-core-1.4.0.jar&lt;io.grpc.internal(CallCredentialsApplyingTransportFactory$CallCredentialsApplyingTransport.class[CallCredentialsApplyingTransport" modifiers="2" timestamp="1503492470000"/>
+<typeInfo handle="=springcloud-test/\/Users\/tallong\/.m2\/repository\/org\/springframework\/cloud\/spring-cloud-netflix-core\/1.2.2.RELEASE\/spring-cloud-netflix-core-1.2.2.RELEASE.jar&lt;org.springframework.cloud.netflix.hystrix(EnableHystrix.class[EnableHystrix" modifiers="9729" timestamp="1479089320000"/>
+</typeInfoHistroy>

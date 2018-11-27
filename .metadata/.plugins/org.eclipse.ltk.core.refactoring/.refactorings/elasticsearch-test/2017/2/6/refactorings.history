@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;INDEX_NAME&apos; from expression &apos;&quot;my_index&quot;&apos;&#x0A;- Original project: &apos;elasticsearch-test&apos;&#x0A;- Constant name: &apos;INDEX_NAME&apos;&#x0A;- Constant expression: &apos;&quot;my_index&quot;&apos;&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Replace occurrences of expression with constant" description="Extract constant &apos;INDEX_NAME&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src\/main\/java&lt;com.dl.es{EsTest.java" name="INDEX_NAME" qualify="false" replace="true" selection="2524 10" stamp="1486695974226" version="1.0" visibility="2"/>
+</session>

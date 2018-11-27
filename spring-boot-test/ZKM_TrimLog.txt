@@ -1,0 +1,4 @@
+Trimmed class "contacts.biz.Contact"
+Trimmed class "contacts.biz.ContactController"
+Trimmed class "contacts.biz.ContactRepository"
+Trimmed class "contacts.biz.ContactRepository$1"

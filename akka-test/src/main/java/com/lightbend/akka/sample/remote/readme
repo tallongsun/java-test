@@ -1,0 +1,16 @@
+远程的话
+要先读conf文件
+再设置dispatcher
+再创建actorSystem
+这个actorSystem创建的actor可以通过conf文件配置的地址访问
+
+master节点
+  收到任务时，读取所有uid，将uid按一定规则指派给woker节点
+  收到woker的注册时，监控worker，加入woker节点列表
+  worker宕机时，移除woker节点列表
+#master节点需要主从配置
+
+worker节点
+  收到某个uid任务时，读取uid数据，对uid算路径匹配，返回给master
+  收到master加入集群时，向master注册自己的信息
+  

@@ -1,0 +1,10 @@
+{"queryType" : "topN", 
+"dataSource" : "demo", 
+"dimension" : "UserName", 
+"threshold" : 10, 
+"metric" : "PaymentAmount", 
+"aggregations" : [{"type" : "doubleSum", "fieldName" : "PaymentAmount", "name" : "PaymentAmount"}], 
+"filter" : {"type" : "and", "fields" : [{"type" : "selector", "dimension" : "event", "value" : "PayOrder"}]}, 
+"granularity" : {"type" : "period", "period" : "PT1H", "timeZone" : "Asia/Shanghai"}, 
+"intervals" : ["2000-03-17T08/2020-03-18T08"]
+}

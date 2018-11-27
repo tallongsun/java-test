@@ -1,0 +1,184 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "cn.rongcapital.mc2.journey.processor.master.proto";
+option java_outer_classname = "CustomerJourneyProto";
+
+service CustomerJourney {
+    rpc getAvailableTime (AvailableRequest) returns (AvailableReply); // 获取更查询的最早日期
+    rpc clear (ClearRequest) returns (ClearReply); // 清理旅程计算结果
+    rpc publish (PublishRequest) returns (PublishReply); // 发布旅程
+    rpc queryStatus (QueryRequest) returns (QueryReply); // 查询旅程图
+    rpc contrastStatus (ContrastRequest) returns (ContrastReply); // 对比分析
+    rpc queryDropRank (DropRequest) returns (DropReply); // 流失分析
+    rpc querySummaryInfo (SummaryRequest) returns (SummaryReply); // 查询旅程图整体指标
+    rpc batchQuerySummaryInfo (BatchSummaryRequest) returns (BatchSummaryReply); // 批量查询旅程图整体指标
+    rpc exportDetail (ExportRequest) returns (ExportReply); // 导出明细
+}
+
+message AvailableRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+}
+
+message AvailableReply {
+    int32 code = 1;
+    string time = 2; // long型时间戳（单位ms，实际精确到小时）
+}
+
+message ClearRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+}
+
+message ClearReply {
+    int32 code = 1;
+}
+
+message JourneyNode {
+    string id = 1;
+    string bid = 2; // 对应行为数据明细的BID
+    string type = 3;
+    repeated JourneyEdge outEdge = 4;
+    repeated JourneyEdge inEdge = 5;
+    string filters = 6; //[{"attributeValues": ["1"],"operationCode": "eq","attributeCode": "name"}]
+}
+
+message JourneyEdge {
+    string fromNodeId = 1;
+    string toNodeId = 2;
+    string dropRules = 3; //[{"code": "WATCH","detail": {"config": 60}}]
+}
+
+message PublishRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+    string from = 3; // long型时间戳（单位ms，实际精确到小时）
+    string to = 4; // long型时间戳（单位ms，实际精确到小时）
+    repeated JourneyNode nodes = 5;
+}
+
+message PublishReply {
+    int32 code = 1;
+}
+
+message JourneyNodeStatus {
+    string id = 1;
+    int32 presents = 2;
+    int32 droppeds = 3;
+    int32 moveds = 4;
+    int32 converteds = 5;
+    int32 injecteds = 6;
+    int32 totals = 7;
+}
+
+message JourneyEdgeStatus {
+    string fromNodeId = 1;
+    string toNodeId = 2;
+    int32 count = 3;
+    bool isContrast = 4;
+}
+
+message QueryRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+    string from = 3;
+    string to = 4;
+}
+
+message QueryReply {
+    int32 code = 1;
+    repeated JourneyNodeStatus nodes = 2; // 所有点状态
+    repeated JourneyEdgeStatus edges = 3; // 所有边状态
+    int64 progress = 4; // 已经计算完成的数据量
+    int64 total = 5; // 总数据量
+}
+
+message StatusPart {
+    string key = 1;
+    int32 count = 2;
+}
+
+message JourneyNodeStatusForContrast {
+    string id = 1;
+    repeated StatusPart parts = 2;
+}
+
+message ContrastRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+    string from = 3;
+    string to = 4;
+    repeated string nodeIds = 5;
+}
+
+message ContrastReply {
+    int32 code = 1;
+    repeated JourneyNodeStatus nodes = 2; // 所有未进行对比的点状态
+    repeated JourneyEdgeStatus edges = 3; // 所有边状态
+    repeated JourneyNodeStatusForContrast contrastNodes = 4; // 所有进行对比的点状态
+}
+
+message DropRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+    string from = 3;
+    string to = 4;
+    string nodeId = 5;
+    int32 topN = 6;
+}
+
+message DropReply {
+    int32 code = 1;
+    repeated StatusPart ranks = 2; // 流失排行列表
+}
+
+message SummaryRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+}
+
+message SummaryReply {
+    int32 code = 1;
+    SummaryInfo summaryInfo = 2;
+}
+
+message BatchSummaryRequest {
+    int32 tenantId = 1;
+    repeated int32 journeyId = 2;
+}
+
+message BatchSummaryReply {
+    int32 code = 1;
+    repeated SummaryInfo summaryInfo = 2;
+}
+
+message SummaryInfo {
+    int32 journeyId = 1;
+    int32 groupTotal = 2; // 暂不提供这个数
+    int32 attendeeTotal = 3;
+    int32 convertedTotal = 4;
+    ConvertedInfo yesterday = 5; // 昨天完成情况
+    ConvertedInfo last30day = 6; // 前30天完成情况
+}
+
+message ConvertedInfo {
+    int32 total = 1; // 完成人数
+    int32 trend = 2; // 与前天相比升降标志，1为升，-1为降，0为持平
+    string trendValue = 3; // 与前天相比的升降百分比
+}
+
+message ExportRequest {
+    int32 tenantId = 1;
+    int32 journeyId = 2;
+    string nodeId = 3;
+    string status = 4;
+    string from = 5;
+    string to = 6;
+    int32 pageNumber = 7;
+    int32 pageSize = 8;
+}
+
+message ExportReply {
+    int32 code = 1;
+    repeated string user = 2;
+}

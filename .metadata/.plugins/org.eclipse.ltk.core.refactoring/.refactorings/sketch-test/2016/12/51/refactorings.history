@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.dl.sketch.theta&apos; to &apos;com.dl.sketch&apos;&#x0A;- Original project: &apos;sketch-test&apos;&#x0A;- Original element: &apos;sketch-test/src/main/java/com.dl.sketch.theta&apos;&#x0A;- Renamed element: &apos;sketch-test/src/main/java/com.dl.sketch&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.dl.sketch.theta&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.dl.sketch.theta" name="com.dl.sketch" qualified="false" references="true" stamp="1481612319727" textual="false" version="1.0"/>
+</session>

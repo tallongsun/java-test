@@ -1,0 +1,401 @@
+-- Listing extra properties --
+spring-batch.version = 3.0.7.RELEASE
+undertow.version = 1.4.11.Final
+httpclient.version = 4.5.3
+webjars-locator.version = 0.32
+maven-surefire-plugin.version = 2.18.1
+spring-ldap.version = 2.3.1.RELEASE
+hibernate.version = 5.0.12.Final
+spring-security-oauth.version = 2.0.13.RELEASE
+groovy.version = 2.4.9
+spring-social-linkedin.version = 1.0.2.RELEASE
+jmustache.version = 1.13
+spring-cloud-connectors.version = 1.2.3.RELEASE
+mockito.version = 1.10.19
+json.version = 20140107
+maven-antrun-plugin.version = 1.8
+bitronix.version = 2.1.4
+java.version = 1.6
+commons-beanutils.version = 1.9.3
+atomikos.version = 3.9.3
+exec-maven-plugin.version = 1.5.0
+gradle.version = 2.9
+jersey.version = 2.25.1
+maven-javadoc-plugin.version = 2.10.4
+jaxen.version = 1.1.6
+caffeine.version = 2.3.5
+trimLogFileName = /Users/tallong/JavaProjects/test/spring-boot-test/ZKM_TrimLog.txt
+couchbase-cache-client.version = 2.1.0
+sun-mail.version = 1.5.6
+wsdl4j.version = 1.6.3
+jedis.version = 2.9.0
+classpathLibs = /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+javax-mail.version = 1.5.6
+maven-failsafe-plugin.version = 2.18.1
+lombok.version = 1.16.14
+activemq.version = 5.14.3
+spring-security-jwt.version = 1.0.7.RELEASE
+spring-mobile.version = 1.1.5.RELEASE
+commons-dbcp.version = 1.4
+project.version = 0.0.1-SNAPSHOT
+log4j2.version = 2.7
+aspectj.version = 1.8.9
+janino.version = 2.7.8
+hazelcast-hibernate5.version = 1.1.3
+versions-maven-plugin.version = 2.2
+spring-kafka.version = 1.1.3.RELEASE
+tomcat.version = 8.5.11
+postgresql.version = 9.4.1212.jre7
+statsd-client.version = 3.1.0
+spring-social-twitter.version = 1.1.2.RELEASE
+flyway.version = 3.2.1
+snakeyaml.version = 1.17
+thymeleaf-extras-conditionalcomments.version = 2.1.2.RELEASE
+compileArtifactPath = /Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.5.2.RELEASE/spring-boot-starter-web-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter/1.5.2.RELEASE/spring-boot-starter-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar:/Users/tallong/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.24/jcl-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/jul-to-slf4j/1.7.24/jul-to-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.24/log4j-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.5.2.RELEASE/spring-boot-starter-tomcat-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.11/tomcat-embed-core-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.11/tomcat-embed-el-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.11/tomcat-embed-websocket-8.5.11.jar:/Users/tallong/.m2/repository/org/hibernate/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final.jar:/Users/tallong/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/tallong/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/tallong/.m2/repository/com/fasterxml/classmate/1.3.3/classmate-1.3.3.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar:/Users/tallong/.m2/repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf-spring4/2.1.5.RELEASE/thymeleaf-spring4-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf/2.1.5.RELEASE/thymeleaf-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar:/Users/tallong/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar:/Users/tallong/.m2/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar:/Users/tallong/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/1.5.2.RELEASE/spring-boot-starter-jdbc-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.5.11/tomcat-jdbc-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.11/tomcat-juli-8.5.11.jar:/Users/tallong/.m2/repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/h2database/h2/1.4.193/h2-1.4.193.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-actuator/1.5.2.RELEASE/spring-boot-actuator-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot/1.5.2.RELEASE/spring-boot-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar
+maven-enforcer-plugin.version = 1.4
+maven-dependency-plugin.version = 2.10
+resource.delimiter = @
+hikaricp.version = 2.5.1
+assertj.version = 2.6.0
+nekohtml.version = 1.9.22
+jest.version = 2.0.4
+javax-transaction.version = 1.2
+hazelcast.version = 3.7.5
+mariadb.version = 1.5.8
+glassfish-el.version = 3.0.0
+project.build.directory = /Users/tallong/JavaProjects/test/spring-boot-test/target
+crashub.version = 1.3.2
+thymeleaf-extras-java8time.version = 2.1.0.RELEASE
+javax-validation.version = 1.1.0.Final
+isSkip = false
+spring-security.version = 4.2.2.RELEASE
+spring-social.version = 1.1.4.RELEASE
+solr.version = 5.5.4
+maven-eclipse-plugin.version = 2.10
+gemfire.version = 8.2.2
+neo4j-ogm.version = 2.1.1
+servlet-api.version = 3.1.0
+project.reporting.outputEncoding = UTF-8
+joda-time.version = 2.9.7
+hibernate-validator.version = 5.3.4.Final
+logFileName = /Users/tallong/JavaProjects/test/spring-boot-test/ZKM_log.txt
+jaybird.version = 2.2.12
+commons-collections.version = 3.2.2
+liquibase.version = 3.5.3
+hikaricp-java6.version = 2.3.13
+maven-resources-plugin.version = 2.7
+embedded-mongo.version = 1.50.5
+isParseOnly = false
+querydsl.version = 4.1.4
+spring-integration.version = 4.3.8.RELEASE
+mongodb.version = 3.4.2
+commons-codec.version = 1.10
+scriptFile = /Users/tallong/JavaProjects/test/spring-boot-test/zkm.txt
+antlr2.version = 2.7.7
+xml-apis.version = 1.4.01
+maven-jar-plugin.version = 2.6
+jms-api.version = 1.1-rev-1
+jetty-el.version = 8.0.33
+selenium.version = 2.53.1
+jetty.version = 9.4.2.v20170220
+maven-help-plugin.version = 2.2
+ehcache.version = 2.10.3
+mssql-jdbc.version = 6.1.0.jre7
+spring-integration-java-dsl.version = 1.2.1.RELEASE
+spring-retry.version = 1.2.0.RELEASE
+ehcache3.version = 3.2.1
+simple-json.version = 1.1.1
+couchbase-client.version = 2.3.7
+narayana.version = 5.5.3.Final
+basedir = /Users/tallong/JavaProjects/test/spring-boot-test
+infinispan.version = 8.2.6.Final
+freemarker.version = 2.3.25-incubating
+unboundid-ldapsdk.version = 3.2.1
+httpasyncclient.version = 4.1.3
+thymeleaf-extras-springsecurity4.version = 2.1.3.RELEASE
+spring-social-facebook.version = 2.0.3.RELEASE
+artemis.version = 1.5.3
+classmate.version = 1.3.3
+spring-plugin.version = 1.2.0.RELEASE
+spring.version = 4.3.7.RELEASE
+selenium-htmlunit.version = 2.21
+appengine-sdk.version = 1.9.49
+project.build.sourceEncoding = UTF-8
+maven-shade-plugin.version = 2.4.3
+commons-dbcp2.version = 2.1.1
+htmlunit.version = 2.21
+jboss-transaction-spi.version = 7.5.1.Final
+hamcrest.version = 1.3
+junit.version = 4.12
+javax-cache.version = 1.0.0
+maven-install-plugin.version = 2.5.2
+build-helper-maven-plugin.version = 1.10
+jtds.version = 1.3.1
+slf4j.version = 1.7.24
+mysql.version = 5.1.41
+maven-compiler-plugin.version = 3.1
+git-commit-id-plugin.version = 2.2.2
+derby.version = 10.13.1.1
+thymeleaf-layout-dialect.version = 1.4.0
+hikaricp-java7.version = 2.4.11
+jooq.version = 3.9.1
+project.build.outputDirectory = /Users/tallong/JavaProjects/test/spring-boot-test/target/classes
+maven-clean-plugin.version = 2.6.1
+logback.version = 1.1.11
+spring-restdocs.version = 1.1.2.RELEASE
+jsonassert.version = 1.4.0
+spring-session.version = 1.3.0.RELEASE
+elasticsearch.version = 2.4.4
+httpcore.version = 4.4.6
+sqlite-jdbc.version = 3.15.1
+dom4j.version = 1.6.1
+thymeleaf-extras-data-attribute.version = 1.3
+jdom2.version = 2.0.6
+javassist.version = 3.21.0-GA
+jetty-jsp.version = 2.2.0.v201112011158
+spring-hateoas.version = 0.23.0.RELEASE
+json-path.version = 2.2.0
+sendgrid.version = 2.2.2
+spring-data-releasetrain.version = Ingalls-SR1
+spring-ws.version = 2.4.0.RELEASE
+dropwizard-metrics.version = 3.1.3
+commons-pool.version = 1.6
+jboss-logging.version = 3.3.0.Final
+project.packaging = jar
+jstl.version = 1.2
+hazelcast-hibernate4.version = 3.7.1
+webjars-hal-browser.version = 9f96c74
+maven-war-plugin.version = 2.6
+pluginArtifactPath = /Users/tallong/.m2/repository/com/zelix/plugins/zkm-plugin/1.0.3/zkm-plugin-1.0.3.jar:/Users/tallong/Downloads/ZKMEval/ZKM.jar:/Users/tallong/.m2/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar
+cassandra-driver.version = 3.1.4
+h2.version = 1.4.193
+gson.version = 2.8.0
+jolokia.version = 1.3.5
+project.build.finalName = spring-boot-test-0.0.1-SNAPSHOT
+maven-assembly-plugin.version = 2.6
+commons-digester.version = 2.1
+jackson.version = 2.8.7
+isVerbose = true
+maven-source-plugin.version = 2.4
+jna.version = 4.2.2
+project.artifactId = spring-boot-test
+maven.compiler.target = 1.6
+maven-deploy-plugin.version = 2.8.2
+thymeleaf.version = 2.1.5.RELEASE
+spring-loaded.version = 1.2.6.RELEASE
+reactor-spring.version = 2.0.7.RELEASE
+maven-site-plugin.version = 3.5.1
+reactor.version = 2.0.8.RELEASE
+spock.version = 1.0-groovy-2.4
+commons-pool2.version = 2.4.2
+maven-invoker-plugin.version = 1.10
+spring-amqp.version = 1.7.1.RELEASE
+maven.compiler.source = 1.6
+hsqldb.version = 2.3.3
+
+-- Listing system properties --
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib
+java.vm.version = 25.92-b14
+gopherProxySet = false
+maven.multiModuleProjectDirectory = /Users/tallong/JavaProjects/test/spring-boot-test
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+guice.disable.misplaced.annotation.check = true
+path.separator = :
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = CN
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = unknown
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = /Users/tallong/JavaProjects/test/spring-boot-test
+java.runtime.version = 1.8.0_92-b14
+java.awt.graphicsenv = sun.awt.CGraphicsEnvironment
+java.endorsed.dirs = /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/endorsed
+os.arch = x86_64
+java.io.tmpdir = /var/folders/7w/jvllhlcj21n50nj1ql61rnch0000gn/T/
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+os.name = Mac OS X
+classworlds.conf = /Users/tallong/JavaProjects/test/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5101231483021832640.tmp
+sun.jnu.encoding = UTF-8
+java.library.path = /Users/tallong/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.13.2
+user.home = /Users/tallong
+user.timezone = Asia/Shanghai
+java.awt.printerjob = sun.lwawt.macosx.CPrinterJob
+file.encoding = UTF-8
+java.specification.version = 1.8
+java.class.path = /Users/tallong/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216/jars/plexus-classworlds-2.5.2.jar
+user.name = tallong
+java.vm.specification.version = 1.8
+sun.java.command = org.codehaus.plexus.classworlds.launcher.Launcher -B -s /usr/local/Cellar/maven/3.3.9/libexec/conf/settings.xml install
+java.home = /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre
+sun.arch.data.model = 64
+user.language = zh
+java.specification.vendor = Oracle Corporation
+user.language.format = en
+awt.toolkit = sun.lwawt.macosx.LWCToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_92
+java.ext.dirs = /Users/tallong/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+sun.boot.class.path = /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/classes
+java.vendor = Oracle Corporation
+maven.home = /Users/tallong/JavaProjects/test/spring-boot-test/EMBEDDED
+file.separator = /
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeBig
+sun.cpu.endian = little
+sun.cpu.isalist = 
+
+defaultCharset=UTF-8
+
+Maximum memory is 1864192K.
+
+[2017.12.26 15:26:52] Using "/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jfr.jar" as path to java.lang.Object (A)
+[2017.12.26 15:26:52] Zelix KlassMaster (evaluation only) 9.0.7
+                      30 day evaluation expiring 25 Jan 2018
+                      xin sun - rc
+                      sunxin@ruixuesoft.com
+                      Copyright 1997-2017 Zelix Pty Ltd (ABN 47 078 740 093)
+                      All rights reserved
+[2017.12.26 15:26:52] Preprocessing ZKM Script file "/Users/tallong/JavaProjects/test/spring-boot-test/zkm.txt"
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//System variables shown in blue. These will be replaced with their corresponding values.
+classpath "/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar"
+          "/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.5.2.RELEASE/spring-boot-starter-web-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter/1.5.2.RELEASE/spring-boot-starter-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar:/Users/tallong/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.24/jcl-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/jul-to-slf4j/1.7.24/jul-to-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.24/log4j-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.5.2.RELEASE/spring-boot-starter-tomcat-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.11/tomcat-embed-core-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.11/tomcat-embed-el-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.11/tomcat-embed-websocket-8.5.11.jar:/Users/tallong/.m2/repository/org/hibernate/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final.jar:/Users/tallong/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/tallong/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/tallong/.m2/repository/com/fasterxml/classmate/1.3.3/classmate-1.3.3.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar:/Users/tallong/.m2/repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf-spring4/2.1.5.RELEASE/thymeleaf-spring4-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf/2.1.5.RELEASE/thymeleaf-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar:/Users/tallong/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar:/Users/tallong/.m2/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar:/Users/tallong/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/1.5.2.RELEASE/spring-boot-starter-jdbc-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.5.11/tomcat-jdbc-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.11/tomcat-juli-8.5.11.jar:/Users/tallong/.m2/repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/h2database/h2/1.4.193/h2-1.4.193.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-actuator/1.5.2.RELEASE/spring-boot-actuator-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot/1.5.2.RELEASE/spring-boot-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar"
+          "/Users/tallong/.m2/repository/com/zelix/plugins/zkm-plugin/1.0.3/zkm-plugin-1.0.3.jar:/Users/tallong/Downloads/ZKMEval/ZKM.jar:/Users/tallong/.m2/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar"
+          ;
+
+open      "/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar";
+
+//trimExclude *.*^ public static main(java.lang.String[]);
+
+//trim;
+
+exclude     *.^*^ public static main(java.lang.String[]);
+
+obfuscate   keepInnerClassInfo=false
+            //keepGenericsInfo=%myProperty0%
+            obfuscateFlow=aggressive
+            exceptionObfuscation=heavy
+            encryptStringLiterals=flowObfuscate
+            ;
+
+saveAll   "/Users/tallong/JavaProjects/test/spring-boot-test/target";
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+[2017.12.26 15:26:52] Parsing ZKM Script file "/Users/tallong/JavaProjects/test/spring-boot-test/zkm.txt"
+[2017.12.26 15:26:53] Setting classpath to "/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.5.2.RELEASE/spring-boot-starter-web-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter/1.5.2.RELEASE/spring-boot-starter-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar:/Users/tallong/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.24/jcl-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/jul-to-slf4j/1.7.24/jul-to-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.24/log4j-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.5.2.RELEASE/spring-boot-starter-tomcat-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.11/tomcat-embed-core-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.11/tomcat-embed-el-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.11/tomcat-embed-websocket-8.5.11.jar:/Users/tallong/.m2/repository/org/hibernate/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final.jar:/Users/tallong/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/tallong/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/tallong/.m2/repository/com/fasterxml/classmate/1.3.3/classmate-1.3.3.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar:/Users/tallong/.m2/repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf-spring4/2.1.5.RELEASE/thymeleaf-spring4-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf/2.1.5.RELEASE/thymeleaf-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar:/Users/tallong/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar:/Users/tallong/.m2/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar:/Users/tallong/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/1.5.2.RELEASE/spring-boot-starter-jdbc-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.5.11/tomcat-jdbc-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.11/tomcat-juli-8.5.11.jar:/Users/tallong/.m2/repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/h2database/h2/1.4.193/h2-1.4.193.jar:/var/folders/7w/jvllhlcj21n50nj1ql61rnch0000gn/T/ZKM7752188976516850871.tmp:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-actuator/1.5.2.RELEASE/spring-boot-actuator-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot/1.5.2.RELEASE/spring-boot-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/zelix/plugins/zkm-plugin/1.0.3/zkm-plugin-1.0.3.jar:/Users/tallong/Downloads/ZKMEval/ZKM.jar:/Users/tallong/.m2/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar"
+	Changing classpath...
+	from	"/Users/tallong/.p2/pool/plugins/org.eclipse.m2e.maven.runtime_1.8.2.20171007-0216/jars/plexus-classworlds-2.5.2.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jfr.jar"
+	to	"/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.5.2.RELEASE/spring-boot-starter-web-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter/1.5.2.RELEASE/spring-boot-starter-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.5.2.RELEASE/spring-boot-starter-logging-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar:/Users/tallong/.m2/repository/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar:/Users/tallong/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.24/jcl-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/jul-to-slf4j/1.7.24/jul-to-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.24/log4j-over-slf4j-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.5.2.RELEASE/spring-boot-starter-tomcat-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.11/tomcat-embed-core-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.11/tomcat-embed-el-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.11/tomcat-embed-websocket-8.5.11.jar:/Users/tallong/.m2/repository/org/hibernate/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final.jar:/Users/tallong/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/tallong/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/Users/tallong/.m2/repository/com/fasterxml/classmate/1.3.3/classmate-1.3.3.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar:/Users/tallong/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar:/Users/tallong/.m2/repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf-spring4/2.1.5.RELEASE/thymeleaf-spring4-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/org/thymeleaf/thymeleaf/2.1.5.RELEASE/thymeleaf-2.1.5.RELEASE.jar:/Users/tallong/.m2/repository/ognl/ognl/3.0.8/ognl-3.0.8.jar:/Users/tallong/.m2/repository/org/javassist/javassist/3.21.0-GA/javassist-3.21.0-GA.jar:/Users/tallong/.m2/repository/org/unbescape/unbescape/1.1.0.RELEASE/unbescape-1.1.0.RELEASE.jar:/Users/tallong/.m2/repository/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/1.5.2.RELEASE/spring-boot-starter-jdbc-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.5.11/tomcat-jdbc-8.5.11.jar:/Users/tallong/.m2/repository/org/apache/tomcat/tomcat-juli/8.5.11/tomcat-juli-8.5.11.jar:/Users/tallong/.m2/repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/h2database/h2/1.4.193/h2-1.4.193.jar:/var/folders/7w/jvllhlcj21n50nj1ql61rnch0000gn/T/ZKM7752188976516850871.tmp(/Users/tallong/.m2/repository/com/h2database/h2/1.4.193/h2-1.4.193.jar!org/h2/util/data.zip):/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-actuator/1.5.2.RELEASE/spring-boot-actuator-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot/1.5.2.RELEASE/spring-boot-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.5.2.RELEASE/spring-boot-autoconfigure-1.5.2.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar:/Users/tallong/.m2/repository/com/zelix/plugins/zkm-plugin/1.0.3/zkm-plugin-1.0.3.jar:/Users/tallong/Downloads/ZKMEval/ZKM.jar:/Users/tallong/.m2/repository/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar"
+[2017.12.26 15:26:53] Opening classes...
+	contacts/biz/ContactController.class opened from /Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar
+	contacts/biz/ContactRepository$1.class opened from /Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar
+	contacts/biz/ContactRepository.class opened from /Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar
+	contacts/biz/Contact.class opened from /Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar
+	contacts/Application.class opened from /Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar
+5 classes opened in 0 seconds. 134081K of memory used. 205374K of memory free.
+
+[2017.12.26 15:26:53] Setting exclusions...
+[2017.12.26 15:26:53] Obfuscating classes...
+	changeLogFileIn=""
+	changeLogFileOut="ChangeLog.txt"
+	aggressiveMethodRenaming=false
+	randomize=false
+	allClassesOpened=true
+	keepInnerClassInfo=false
+	keepGenericsInfo=true
+	mixedCaseClassNames=ifInArchive
+	uniqueClassNames=false
+	allowMethodParameterChanges=false
+	obfuscateFlow=aggressive
+	encryptStringLiterals=flowObfuscate
+	lineNumbers=delete
+	localVariables=delete
+	methodParameters=keepVisible
+	deriveGroupingsFromInputChangeLog=false
+	exceptionObfuscation=heavy
+	autoReflectionHandling=none
+	obfuscateReferences=none
+	Exclusion parameters:
+		*.^*^ public static main(java.lang.String[])
+	Excluding method "public static void main(java.lang.String[])" in class "@org.springframework.context.annotation.ComponentScan @org.springframework.boot.autoconfigure.EnableAutoConfiguration public contacts.Application" because of "exclusion parameter '*.^*^ public static main(java.lang.String[])'"
+	Excluding package "contacts" because of "exclusion parameter '*.^*^ public static main(java.lang.String[])'"
+	Excluding class "@org.springframework.context.annotation.ComponentScan @org.springframework.boot.autoconfigure.EnableAutoConfiguration public contacts.Application" because of "exclusion parameter '*.^*^ public static main(java.lang.String[])'"
+	Using internal default exclusions. File '/Users/tallong/JavaProjects/test/spring-boot-test/defaultExclude.txt' not found
+	Default exclusion parameters:
+		"@javax.persistence.IdClass(value=*.^*^) public *(*)"
+		"@javax.persistence.Table *.^*^ public *(*)"
+		"@javax.persistence.Entity *.^*^ public *(*)"
+		"@javax.ejb.Stateful *.^*^ public *(*)"
+		"@javax.ejb.Stateless *.^*^ public *(*)"
+		"@javax.ejb.RemoteHome *.^*^ public *(*)"
+		"@javax.ejb.Remote *.^*^ public *(*)"
+		"*.^*^ native *(*) +signatureClasses"
+		"@javax.ejb.MessageDriven *.*^ public *(*)"
+		"@javax.jws.WebService *.*^ @javax.jws.WebMethod *(*)"
+		"*.* lambda$*(*)"
+		"*.* implements javax.ejb.EnterpriseBean public *(*)"
+		"*.* implements javax.ejb.EJBLocalObject public *(*)"
+		"*.* implements javax.ejb.EJBObject public *(*)"
+		"*.* extends java.lang.Enum public *"
+		"*.* implements javax.ejb.EJBLocalHome public find*(*)"
+		"*.* implements javax.ejb.EJBHome public find*(*)"
+		"@javax.xml.bind.annotation.XmlType *.* *"
+		"*.* @javax.persistence.Id *(*)"
+		"*.* @javax.persistence.Id *"
+		"*.*Key implements java.io.Serializable public *"
+		"*.* java.io.ObjectStreamField[] serialPersistentFields"
+		"*.* readObjectNoData() throws java.io.ObjectStreamException"
+		"*.* readResolve()"
+		"*.* writeReplace()"
+		"interface *.* implements java.rmi.Remote *(*) throws java.rmi.RemoteException +signatureClasses"
+		"*.* containing{@java.beans.ConstructorProperties *(*)} public get<link>()"
+		"*.<link>MXBean"
+		"*.<link>MBean"
+		"*.* @javax.xml.bind.annotation.XmlTransient public set<link>(*)"
+		"*.* @javax.xml.bind.annotation.XmlTransient public is<link>()"
+		"*.* @javax.xml.bind.annotation.XmlTransient public get<link>()"
+		"*.<link>Customizer"
+		"*.<link>BeanInfo"
+		"*._<link>_Tie implements javax.rmi.CORBA.Tie"
+		"*._<link>_Stub extends javax.rmi.CORBA.Stub"
+		"*.<link>_Stub extends java.rmi.server.RemoteStub"
+		"*.<link>_Skel implements java.rmi.server.Skeleton"
+		"@javax.xml.bind.annotation.XmlRootElement *.* private *"
+		"*.* implements java.lang.annotation.Annotation public value()"
+		"*.* implements javax.ejb.EJBLocalHome public create(*)"
+		"*.* implements javax.ejb.EJBHome public create(*)"
+		"*.* extends java.lang.Enum public values()"
+		"*.* $deserializeLambda$(java.lang.invoke.SerializedLambda)"
+		"com.javafx.main.Main"
+		"*.* @javafx.fxml.FXML initialize()"
+		"@javax.persistence.Entity *.* @javax.persistence.Column *"
+		"@javax.xml.bind.annotation.XmlRootElement *.* public set<link>(*)"
+		"@javax.xml.bind.annotation.XmlRootElement *.* public is<link>()"
+		"@javax.xml.bind.annotation.XmlRootElement *.* public get<link>()"
+		"@javax.xml.bind.annotation.XmlType *.* public set<link>(*)"
+		"@javax.xml.bind.annotation.XmlType *.* public is<link>()"
+		"@javax.xml.bind.annotation.XmlType *.* public get<link>()"
+		"*.* static final long serialVersionUID"
+		"*.* extends java.lang.Enum public valueOf(java.lang.String)"
+		"*.* private writeObject(java.io.ObjectOutputStream)"
+		"*.* private readObject(java.io.ObjectInputStream)"
+		"*.* static createUI(javax.swing.JComponent)"
+MESSAGE: Obfuscating control flow in only one or two methods in each class
+	StackMap algorithm=0
+[2017.12.26 15:26:54] Saving 5 classes in "/Users/tallong/JavaProjects/test/spring-boot-test/target"
+WARNING: File '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' already exists in '/Users/tallong/JavaProjects/test/spring-boot-test/target'. Renaming to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar.BACKUP'.
+	Class file '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar!contacts/Application.class' saved to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' as 'contacts/Application.class'.
+	Class file '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar!contacts/biz/Contact.class' saved to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' as 'contacts/a/a.class'.
+	Class file '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar!contacts/biz/ContactController.class' saved to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' as 'contacts/a/b.class'.
+	Class file '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar!contacts/biz/ContactRepository.class' saved to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' as 'contacts/a/c.class'.
+	Class file '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar!contacts/biz/ContactRepository$1.class' saved to '/Users/tallong/JavaProjects/test/spring-boot-test/target/spring-boot-test-0.0.1-SNAPSHOT.jar' as 'contacts/a/d.class'.
+[2017.12.26 15:26:54] Terminating normally.

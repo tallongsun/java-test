@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;httpclient-test/OmegaProfile_shadow.pac&apos; to &apos;shadow.pac&apos;" description="Rename resource &apos;OmegaProfile_shadow.pac&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="OmegaProfile_shadow.pac" name="shadow.pac" stamp="1522046921435" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;httpclient-test/shadow.pac&apos; to &apos;proxy.pac&apos;" description="Rename resource &apos;shadow.pac&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="shadow.pac" name="proxy.pac" stamp="1522047098874" updateReferences="true"/>
+</session>

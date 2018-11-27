@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.db.perf.dao.KeyValueMapper">
+
+	<select id="getAll" resultType="com.dl.db.perf.KeyValue">
+		select
+		keyField,valueField
+		from key_value
+	</select>
+
+	<insert id="insert" parameterType="com.dl.db.perf.KeyValue">
+		insert into key_value(keyField,valueField)
+		VALUES
+		(#{keyField},#{valueField})
+	</insert>
+
+	<insert id="insertList" parameterType="java.util.List">
+		insert into key_value (keyField,valueField)
+		VALUES
+		<foreach collection="list" item="item" separator=",">
+			(
+			#{item.keyField},
+			#{item.valueField}
+			)
+		</foreach>
+	</insert>
+
+	<delete id="deleteAll">
+		delete from key_value
+	</delete>
+</mapper>

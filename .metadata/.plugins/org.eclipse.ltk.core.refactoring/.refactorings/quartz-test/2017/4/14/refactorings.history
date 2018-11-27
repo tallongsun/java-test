@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestJob.java&apos; to &apos;quartz-test/src/main/java/com.dl.quartz.spring&apos;&#x0A;- Original project: &apos;quartz-test&apos;&#x0A;- Destination element: &apos;quartz-test/src/main/java/com.dl.quartz.spring&apos;&#x0A;- Original element: &apos;com.dl.quartz.spring.TestJob.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;com.dl.quartz.spring" element1="/src\/main\/java&lt;com.dl.quartz.spring{TestJob.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1491554667495" units="1" version="1.0"/>
+</session>

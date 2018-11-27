@@ -1,0 +1,9 @@
+1504594080546	Rename package 'ElasticsearchConfiguration'
+1504594092131	Rename package 'com.dl.db.conf'
+1504603962025	Rename resource 'datasource-spring.properties'
+1504603971978	Rename resource 'datasource-spring.xml'
+1504604134099	Rename resource 'BlogMapper.xml'
+1504605237840	Delete element
+1504840036212	Copy file
+1504840236079	Copy compilation unit
+1504840399314	Rename field 'mysqlMapper'

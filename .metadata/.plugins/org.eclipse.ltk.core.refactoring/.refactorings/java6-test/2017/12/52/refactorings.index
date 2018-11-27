@@ -1,0 +1,18 @@
+1514269262458	Rename type 'Lauch'
+1514279239785	Rename type 'Launch'
+1514279525109	Delete element
+1514345437759	Extract method 'a'
+1514345535579	Extract local variable 'target'
+1514355498066	Rename type 'TestEncrypt'
+1514358675436	Copy compilation unit
+1514358995041	Rename type 'TestClassLoader'
+1514359202338	Delete element
+1514359214883	Delete element
+1514359319139	Delete element
+1514363953548	Delete element
+1514365120687	Delete element
+1514368822019	Rename resource 'com_dl_jni_JniTest.cpp'
+1514369185545	Rename resource 'com_dl_jni_JniTest.c'
+1514430334955	Delete elements
+1514430339453	Delete element
+1514430381505	Delete element

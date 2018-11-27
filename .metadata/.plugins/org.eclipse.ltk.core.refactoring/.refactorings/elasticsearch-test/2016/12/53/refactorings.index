@@ -1,0 +1,5 @@
+1482845726670	Delete element
+1482845740466	Rename type 'KafkaTest'
+1482846299911	Extract method 'initClient'
+1482847710006	Rename method 'queryMsgFromEs'
+1482847722778	Rename method 'groupbyFromEs'

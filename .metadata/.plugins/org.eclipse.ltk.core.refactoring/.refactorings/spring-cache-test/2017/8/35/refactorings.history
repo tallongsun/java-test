@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;serialize-test/src/main/resources&apos;&#x0A;- Original project: &apos;spring-cache-test&apos;&#x0A;- Destination element: &apos;serialize-test/src/main/resources&apos;&#x0A;- Original elements:&#x0A;     jedis.properties&#x0A;     cache.xml" description="Copy files" destination="=serialize-test/src\/main\/resources" element1="src/main/resources/jedis.properties" element2="src/main/resources/cache.xml" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1504164041914" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int-jms="http://www.springframework.org/schema/integration/jms"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/integration
+			http://www.springframework.org/schema/integration/spring-integration.xsd
+			http://www.springframework.org/schema/integration/jms 
+			http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
+
+	<channel id="topicChannel" />
+		
+	<channel id="getPayloadChannel" />
+
+	<channel id="listenerChannel" />
+
+
+	<beans:bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<beans:property name="brokerURL" value="tcp://localhost:61616" />
+	</beans:bean>
+
+	<int-jms:outbound-channel-adapter
+		channel="topicChannel" destination-name="topic.myTopic"
+		pub-sub-domain="true" />
+
+	<int-jms:message-driven-channel-adapter
+		channel="getPayloadChannel" destination-name="topic.myTopic"
+		pub-sub-domain="true" />
+		
+	<service-activator input-channel="getPayloadChannel"
+		output-channel="listenerChannel"
+		ref="retrievePayloadService" method="getPayload" />
+
+	<service-activator input-channel="listenerChannel"
+		ref="messageListener" method="processMessage" />
+
+</beans:beans>

@@ -1,0 +1,1 @@
+if 'valueField' column type is long varchar, vertica write ok but read error. maybe not support. 

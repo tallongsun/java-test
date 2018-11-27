@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.hanlp&apos; to &apos;com.dl.hanlp&apos;&#x0A;- Original project: &apos;hanlp-test&apos;&#x0A;- Original element: &apos;hanlp-test/src/main/java/com.hanlp&apos;&#x0A;- Renamed element: &apos;hanlp-test/src/main/java/com.dl.hanlp&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.hanlp&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.hanlp" name="com.dl.hanlp" qualified="false" references="true" stamp="1490863852322" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+目前只能远程调试，本地调试没搞通。
+
+mesos framework运行时各进程之间的交互图
+scheduler<->mesos master  <-->  mesos agent<->executor

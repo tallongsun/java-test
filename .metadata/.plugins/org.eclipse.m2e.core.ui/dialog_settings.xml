@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.dl.xp"/>
+			<item value="com.dl"/>
+			<item value="com.dl.httpclient"/>
+			<item value="com.dl.prometheus"/>
+			<item value="com.dl.spring.aop.aspectj"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="xp-test"/>
+			<item value="apache-commons-test"/>
+			<item value="httpclient-test"/>
+			<item value="prometheus-test"/>
+			<item value="spring-aop-aspectj-test"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Users/tallong/JavaProjects/test/"/>
+			<item value="/Users/tallong/JavaProjects/test/mvn-test"/>
+			<item value="/Users/tallong/Downloads/grpc-java/examples"/>
+			<item value="/Users/tallong/Downloads/demo"/>
+			<item value="/Users/tallong/JavaProjects/test/demo"/>
+			<item value="/Users/tallong/git/activator-akka-distributed-workers-java"/>
+			<item value="/Users/tallong/Downloads/spring-integration-samples-master/basic/mqtt"/>
+			<item value="/Users/tallong/Downloads/spring-integration-samples-master/basic/tcp-client-server"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.dl.mybatis"/>
+			<item value="com.dl.spel"/>
+			<item value="SpringSecurityOauth2Client"/>
+		</list>
+		<list key="name">
+			<item value="spring-el-test"/>
+		</list>
+		<list key="artifactId">
+			<item value="mybatis-test"/>
+			<item value="spring-el-test"/>
+			<item value="SpringSecurityOauth2Client"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/Users/tallong/JavaProjects/test/zookeeper-test"/>
+			<item value="/Users/tallong/JavaProjects/test/spring-aop-test"/>
+			<item value="/Users/tallong/JavaProjects/test/kafka-test"/>
+			<item value="/Users/tallong/JavaProjects/test/mvn-test"/>
+			<item value="/Users/tallong/JavaProjects/test/spring-cache-test"/>
+			<item value="/Users/tallong/JavaProjects/test/spring-aop-test/src/main/java/com/dl/spring/aop/service/DummyServiceImpl.java"/>
+			<item value="/Users/tallong/JavaProjects/test/slf4j-test"/>
+			<item value="/Users/tallong/JavaProjects/test/java6-test/src/main/java/com/dl/classloader"/>
+			<item value="/Users/tallong/JavaProjects/test/guice-test"/>
+			<item value="/Users/tallong/JavaProjects/test/quartz-test"/>
+			<item value="/Users/tallong/JavaProjects/test/hanlp-test"/>
+			<item value="/Users/tallong/JavaProjects/test/resteasy-test"/>
+			<item value="/Users/tallong/JavaProjects/test/java8-test/src/main/java/com/dl/executor"/>
+			<item value="/Users/tallong/JavaProjects/test/spring-mvc-test"/>
+			<item value="/Users/tallong/JavaProjects/test/presto-test"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

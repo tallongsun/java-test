@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package services;
+
+option java_multiple_files = true;
+option java_package = "services";
+option java_outer_classname = "UserServiceProtos";
+
+service UserService {
+    rpc getUser(UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest {
+    string name = 1;
+}
+
+message UserResponse {
+    string name = 1;
+    string emailAddress = 2;
+    bool active = 3;
+    string country = 4;
+}

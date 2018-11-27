@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dl.mybatis.dao.BlogMapper">
+	<resultMap id="BaseResultMap" type="com.dl.mybatis.po.Blog">
+		<id column="id" jdbcType="BIGINT" property="id" />
+		<result column="title" jdbcType="VARCHAR" property="title" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, title
+	</sql>
+
+
+<!--  
+	<sql id="eventQuery">
+		select sid,${groupField},timestamp
+		  from event_of_app_${appId}
+		 where event=${funnel.actionName} and timestamp>=${startDate} and timestamp<![CDATA[<=]]>${endDate}
+	</sql> 
+
+	<sql id="funnelQuery">
+		select ${funnels[0].actionName}.${groupField}
+		       ,count(distinct(${funnels[0].actionName}.sid))
+		       <if test="curIndex > 0">,avg(TIMESTAMPDIFF(HOUR,${funnels[curIndex-1].actionName}.timestamp,${funnels[curIndex-1].actionName}.timestamp))</if>
+		  from
+		<foreach collection="funnels" item="funnel" index="index" separator=" inner join ">
+			<if test="curIndex>=index">
+				(<include refid="eventQuery"></include>) ${funnel.actionName}
+				<if test="index > 0">
+					on ${funnels[index-1].actionName}.sid = ${funnels[index].actionName}.sid
+					and ${funnels[index-1].actionName}.timestamp <![CDATA[<]]> ${funnels[index].actionName}.timestamp
+					and TIMESTAMPDIFF(HOUR,${funnels[index-1].actionName}.timestamp,${funnels[index].actionName}.timestamp)<![CDATA[<=]]>${window}
+				</if>
+			</if>
+		</foreach>
+		group by ${funnels[0].actionName}.${groupField}
+	</sql>
+
+	<select id="query" parameterType="java.util.Map" resultType="java.util.Map">
+		select f_${funnels[0].actionName}.${groupField},
+			   <foreach collection="funnels" item="funnel" index="index" separator=",">
+			   	f_${funnel.actionName}.cnt
+			   	<if test="index > 0">,f_${funnel.actionName}.ct</if>
+			   </foreach>
+		  from
+		<foreach collection="funnels" item="funnel" index="curIndex" separator=" left join ">
+			(<include refid="funnelQuery"></include>) f_${funnels[curIndex].actionName}
+			<if test="curIndex > 0">
+				on f_${funnels[0].actionName}.${groupField} = f_${funnels[curIndex].actionName}.${groupField}
+			</if>
+		</foreach>
+	</select>
+-->
+
+	<sql id ='test'>
+	${type}
+		<if test="type eq '1'">aaa</if>
+		<if test="type eq '0'">bbb</if>
+	</sql>
+	
+	<select id="query" parameterType="java.util.Map" resultType="java.util.Map">
+		<include refid="test"></include>
+		<include refid="test"><property name="type" value="0"></property></include>
+	</select>
+
+	
+	<!--  http://www.mybatis.org/mybatis-3//dynamic-sql.html
+	<if test="author != null and author.name != null">
+    	AND author_name like #{author.name}
+  	</if>
+
+	 <choose>
+	    <when test="title != null">
+	      AND title like #{title}
+	    </when>
+	    <when test="author != null and author.name != null">
+	      AND author_name like #{author.name}
+	    </when>
+	    <otherwise>
+	      AND featured = 1
+	    </otherwise>
+	  </choose>
+
+      <where> <trim prefix="WHERE" prefixOverrides="AND |OR ">
+	  <set> <trim prefix="SET" suffixOverrides=",">
+	  
+	  <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+        #{item}
+  	  </foreach>
+	-->
+	
+	<resultMap id="blogResultMap" type="com.dl.mybatis.po.Blog">
+	  <id property="id" column="id" />
+	  <result property="title" column="title"/>
+	</resultMap>
+	<sql id="blogColumns">${alias}.id,${alias}.title</sql>
+	<sql id="blogTable">
+	  ${prefix}blog
+	</sql>
+	<sql id="someinclude">
+	  from
+	    <include refid="${include_target}"/>
+	</sql>
+
+	<select id="selectBlog" parameterType="long" resultMap="blogResultMap">
+		select * from blog where id = #{id}
+	</select>
+	<select id="selectBlogs" resultType="map">
+		select 
+			<include refid="blogColumns"><property name="alias" value="t1" /></include>,
+			<include refid="blogColumns"><property name="alias" value="t2" /></include>
+		from blog t1 cross join blog t2
+	</select>
+	<select id="selectBlogs2" parameterType="long" resultType="com.dl.mybatis.po.Blog">
+	  select id as id,title as title
+	  <include refid="someinclude">
+	    <property name="prefix" value="test."/>
+	    <property name="include_target" value="blogTable"/>
+	  </include>
+	</select>
+	<insert id="insertBlog" parameterType="com.dl.mybatis.po.Blog" useGeneratedKeys="true" keyProperty="id">
+		insert into blog (title) values 
+		<foreach item="item" collection="list" separator=",">
+			(#{item.title})
+		</foreach>
+	</insert>
+	<insert id="insertBlog2">
+		<selectKey keyProperty="id" resultType="long" order="BEFORE">
+			select CAST(RAND()*1000000 as signed)
+		</selectKey>
+		insert into blog (id,title) values (#{id},#{title})
+	</insert>
+	<update id="updateBlog">
+		update blog set
+		title = #{title}
+		where id = #{id}
+	</update>
+	<delete id="deleteBlog">
+	  delete from blog where id = #{id}
+	</delete>
+
+
+	<select id="selectByPrimaryKey" parameterType="java.lang.Long"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from blog
+		where id = #{id,jdbcType=BIGINT}
+	</select>
+	<insert id="insert" parameterType="com.dl.mybatis.po.Blog">
+		insert into blog (id, title)
+		values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertList" parameterType="java.util.List">
+		insert into blog (id,title) VALUES
+		<foreach collection="list" item="item" separator=",">
+			(
+			#{item.id},
+			#{item.title}
+			)
+		</foreach>
+	</insert>
+	<update id="updateByPrimaryKey" parameterType="com.dl.mybatis.po.Blog">
+		update blog
+		set
+		title = #{title,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+		delete from blog
+		where id = #{id,jdbcType=BIGINT}
+	</delete>
+  	<select id="getAll" resultType="com.dl.mybatis.po.Blog">
+		select
+		id,title
+		from blog
+	</select>
+	<insert id="insertSelective" parameterType="com.dl.mybatis.po.Blog">
+		insert into blog
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="title != null">
+				title,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=BIGINT},
+			</if>
+			<if test="title != null">
+				#{title,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective" parameterType="com.dl.mybatis.po.Blog">
+		update blog
+		<set>
+			<if test="title != null">
+				title = #{title,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+
+</mapper>

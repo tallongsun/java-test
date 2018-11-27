@@ -1,0 +1,2 @@
+docker build -t apm-demo .
+docker run -d -p 4000:8080 apm-demo 

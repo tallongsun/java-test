@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/tx
+               http://www.springframework.org/schema/tx/spring-tx.xsd
+               http://www.springframework.org/schema/aop
+               http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- DataSource -->
+    <bean id="abstractDataSource" abstract="true" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="initialSize" value="0"/>
+        <property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="testWhileIdle" value="true" />
+		<property name="removeAbandoned" value="false" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="25200000" />
+		<property name="filters" value="mergeStat" />
+		<property name="validationQuery" value="${db.main.validationSql}" />
+    </bean>
+    
+    <!-- main datasource -->
+    <bean id="quartzDataSource" parent="abstractDataSource">
+	    <property name="username" value="${db.main.user}"/>
+		<property name="password" value="${db.main.password}"/>
+		<property name="maxActive" value="${db.main.maxPoolSize}"/>
+		<property name="url" value="${db.main.jdbcUrl}" />
+	</bean>
+	
+	<!-- TransactionManager -->
+	<bean id="abstractTransactionManager" abstract="true" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"/>
+	
+	<!-- main -->
+	<bean id="quartzTransactionManager" parent="abstractTransactionManager">
+		<property name="dataSource" ref="quartzDataSource" />
+	</bean>
+               
+</beans>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;spring-security-oauth2-client&apos; to &apos;spring-security-oauth2-test&apos;&#x0A;- Original element: &apos;spring-security-oauth2-client&apos;&#x0A;- Renamed element: &apos;spring-security-oauth2-client&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;spring-security-oauth2-client&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=spring-security-oauth2-client" name="spring-security-oauth2-test" references="true" stamp="1478586818701" version="1.0"/>
+</session>

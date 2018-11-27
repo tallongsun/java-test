@@ -1,0 +1,53 @@
+cd /Users/tallong/JavaProjects/test/vertica-test/target/classes
+alter database streamDB set JavaBinaryForUDx='/usr/local/jdk1.8.0_131/bin/java';
+
+//0.udaf java not support
+
+//1.udsf
+//Add2ints
+jar -cvf Add2intsLib.jar com/vertica/sdk/BuildInfo.class com/dl/vertica/udx/udsf/*.class
+
+create library Add2ints as '/home/dbadmin/Add2intsLib.jar' language 'java';
+CREATE FUNCTION add2ints AS LANGUAGE 'Java' NAME 'com.dl.vertica.udx.udsf.Add2intsFactory' library Add2ints;
+select add2ints(a,b) from values;   
+
+//deleteVowels
+jar -cvf vowelremover.jar com/dl/vertica/udx/libs/VowelRemover.class
+
+jar -cvf DeleteVowelsLib.jar com/vertica/sdk/BuildInfo.class com/dl/vertica/udx/udsf/*.class
+create library DeleteVowelsLib as '/home/dbadmin/DeleteVowelsLib.jar' DEPENDS '/home/dbadmin/vowelremover.jar' language 'java';
+CREATE FUNCTION deleteVowels AS language 'java' NAME 'com.dl.vertica.udx.udsf.DeleteVowelsFactory' LIBRARY DeleteVowelsLib;
+SELECT deleteVowels('I hate vowels!');
+
+//2.udanf
+//rank
+select a,b,rank() over(partition by a order by b desc) as rank from values; 
+
+jar -cvf AnalyticFunctions.jar com/vertica/sdk/BuildInfo.class com/dl/vertica/udx/udanf/*.class
+create library AnalyticFunctions as '/home/dbadmin/AnalyticFunctions.jar' language 'java';
+CREATE ANALYTIC FUNCTION an_rank AS language 'java' NAME 'com.dl.vertica.udx.udanf.RankFactory' LIBRARY AnalyticFunctions;
+select a,b,an_rank() over(partition by a order by b desc) as rank from values; 
+
+//3.udtf
+//tokenize
+CREATE TABLE T (url varchar(30), description varchar(2000));   
+INSERT INTO T VALUES ('www.amazon.com','Online retail merchant and provider of cloud services');     
+INSERT INTO T VALUES ('www.hp.com','Leading provider of computer hardware and imaging solutions');    
+INSERT INTO T VALUES ('www.vertica.com','World''s fastest analytic database');    
+COMMIT;   
+
+jar -cvf TransformFunctions.jar com/vertica/sdk/BuildInfo.class com/dl/vertica/udx/udtf/*.class
+create  or replace library TransformFunctions as '/home/dbadmin/TransformFunctions.jar' language 'java';
+CREATE or replace transform FUNCTION ptopk AS language 'java' NAME 'com.dl.vertica.udx.udtf.PolyTopKFactory' LIBRARY TransformFunctions;
+
+SELECT url, tokenize(1,description) OVER (partition by url) FROM T;
+
+//todo::funnel -> multi phrase transform(phrase per funnel)
+jar -cvf FunnelLib.jar com/vertica/sdk/BuildInfo.class com/dl/vertica/udx/udtf/funnel/*.class
+create or replace library FunnelLib as '/home/dbadmin/FunnelLib.jar' language 'java';
+CREATE or replace transform FUNCTION funnel AS language 'java' NAME 'com.dl.vertica.udx.udtf.funnel.FunnelFactory' LIBRARY FunnelLib;
+CREATE or replace transform FUNCTION funnelCount AS language 'java' NAME 'com.dl.vertica.udx.udtf.funnel.FunnelCountFactory' LIBRARY FunnelLib;
+
+select funnelCount(sid,event,Date(timestamp) using parameters w=86400000) over(partition by sid) from stream.event_of_app_50m where timestamp > '2017-10-15'
+
+//4.udl source->filter->parser
